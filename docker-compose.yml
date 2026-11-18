@@ -1,0 +1,25 @@
+services:
+  api:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    environment:
+      DB_PATH: /data/mini_gauntlet.db
+      INVENTORY_PATH: /app/data/inventory.json
+      SCAN_WORKERS: "4"
+    volumes:
+      - db-data:/data # scans and findings survive restarts and rebuilds
+      - ./data/inventory.json:/app/data/inventory.json:ro # the snapshot, read-only
+    restart: unless-stopped
+
+  web:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      api:
+        condition: service_healthy # nginx needs the api hostname to exist
+    restart: unless-stopped
+
+volumes:
+  db-data:
