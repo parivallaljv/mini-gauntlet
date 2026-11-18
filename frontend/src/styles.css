@@ -1,0 +1,257 @@
+:root {
+  --bg: #f6f7f9;
+  --panel: #ffffff;
+  --text: #1d2330;
+  --muted: #667085;
+  --border: #e3e6eb;
+  --accent: #2f5bea;
+  --critical: #b42318;
+  --high: #c4320a;
+  --medium: #b54708;
+  --low: #475467;
+  --pass: #067647;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+}
+
+.app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px 48px;
+}
+
+.topbar {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 16px;
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--text);
+  text-decoration: none;
+}
+
+a {
+  color: var(--accent);
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+h2 {
+  font-size: 1.1rem;
+  margin: 28px 0 10px;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 8px 0 16px;
+}
+
+button {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+button.secondary {
+  background: var(--panel);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+th {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--muted);
+  background: #fafbfc;
+}
+
+.num {
+  text-align: right;
+}
+
+.strong {
+  font-weight: 600;
+}
+
+.mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.small {
+  font-size: 0.8rem;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+/* Long untrusted strings wrap instead of stretching the table. */
+.details {
+  max-width: 420px;
+  overflow-wrap: anywhere;
+}
+
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  white-space: nowrap;
+  color: #fff;
+  background: var(--low);
+}
+
+.badge-pass,
+.badge-completed {
+  background: var(--pass);
+}
+.badge-fail,
+.badge-critical,
+.badge-failed {
+  background: var(--critical);
+}
+.badge-high {
+  background: var(--high);
+}
+.badge-medium {
+  background: var(--medium);
+}
+.badge-cannot_scan,
+.badge-running {
+  background: var(--accent);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.card-label {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.score {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.count-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 3px 0;
+}
+
+.filters {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.filters label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
+  color: var(--muted);
+  gap: 4px;
+}
+
+.filters select {
+  min-width: 180px;
+  padding: 6px;
+  font-size: 0.9rem;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.error {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: #fef3f2;
+  border: 1px solid #fecdca;
+  color: var(--critical);
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-bottom: 16px;
+}
+
+.notice {
+  background: #eff4ff;
+  border: 1px solid #c7d7fe;
+  border-radius: 8px;
+  padding: 10px 14px;
+}
+
+.empty {
+  background: var(--panel);
+  border: 1px dashed var(--border);
+  border-radius: 8px;
+  padding: 24px;
+  text-align: center;
+  color: var(--muted);
+}
