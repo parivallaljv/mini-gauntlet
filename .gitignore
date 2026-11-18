@@ -1,0 +1,17 @@
+# Dependencies and build output
+node_modules/
+dist/
+coverage/
+
+# Python
+__pycache__/
+.venv/
+.pytest_cache/
+.ruff_cache/
+
+# Local data and secrets
+.env
+*.db
+
+# Project brief (kept local)
+ASSIGNMENT.*
