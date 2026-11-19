@@ -6,7 +6,7 @@ the findings in SQLite and shows them in a React dashboard.
 
 [![CI](https://github.com/parivallaljv/mini-gauntlet/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/parivallaljv/mini-gauntlet/actions/workflows/ci.yml?query=branch%3Amain)
 
-> **CI:** GitHub Actions runs on every push. [Green run](https://github.com/parivallaljv/mini-gauntlet/actions/runs/44453319394) (lint, type-check, tests, both Docker images) · [all runs on `main`](https://github.com/parivallaljv/mini-gauntlet/actions/workflows/ci.yml?query=branch%3Amain).
+> **CI:** GitHub Actions runs on every push. [Green run](https://github.com/parivallaljv/mini-gauntlet/actions/runs/44464690236) (lint, type-check, tests, both Docker images) · [all runs on `main`](https://github.com/parivallaljv/mini-gauntlet/actions/workflows/ci.yml?query=branch%3Amain).
 
 ## Quick start
 
