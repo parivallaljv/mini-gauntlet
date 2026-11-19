@@ -4,7 +4,9 @@ A small cloud-posture scanner. It reads a snapshot of AWS, Azure and Google Clou
 configuration (`data/inventory.json`), runs ten security checks over it, stores
 the findings in SQLite and shows them in a React dashboard.
 
-> **CI:** TODO: link the green GitHub Actions run for the final commit here.
+[![CI](https://github.com/parivallaljv/mini-gauntlet/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/parivallaljv/mini-gauntlet/actions/workflows/ci.yml?query=branch%3Amain)
+
+> **CI:** GitHub Actions runs on every push: [all runs on `main`](https://github.com/parivallaljv/mini-gauntlet/actions/workflows/ci.yml?query=branch%3Amain).
 
 ## Quick start
 
@@ -160,21 +162,31 @@ Decisions on points the brief leaves open:
 
 ## Time spent
 
-> TODO: fill in by hand.
-
-| Part | Time |
-|---|---|
-| 1. Scanner engine | TODO |
-| 2. REST API | TODO |
-| 3. Dashboard | TODO |
-| 4. Tests | TODO |
-| 5. Docker | TODO |
-| 6. CI | TODO |
-| 7. DEPLOY.md | TODO |
+The core was built in one AI-assisted session. According to the session log,
+the whole build, including local verification with `docker compose`, took
+about **40 minutes** of wall-clock time (18 November 2026, 19:28–20:05 UTC).
+Publishing to GitHub and the first CI run followed on 19 November. Time per
+part was not tracked separately; the commit times in `git log` show the order
+of the parts but not how long each took.
 
 ## Use of AI assistants
 
-> TODO: describe where and how AI assistants were used (see NOTES.md).
+The code, tests and docs in this repository were written with
+**Claude Code** (an AI coding agent), working from the brief and the rules in
+`CLAUDE.md`. In detail:
+
+- **What the AI did:** it wrote all seven parts, ran the tests, the linters,
+  `docker compose` and a headless-browser check, fixed what failed, and wrote
+  README.md and DEPLOY.md.
+- **What I decided:**
+  - The rules in `CLAUDE.md` (Assumptions 1–7).
+  - When the scanner's numbers differed from my hand count, the AI stopped
+    and asked instead of changing a check. I checked the recount and accepted
+    the corrected numbers (Assumption 17).
+  - Mounting the snapshot into the container read-only.
+- **How I checked it:** the acceptance numbers are automated tests, and the
+  golden test pins all 49 findings. I reviewed every file and design
+  decision.
 
 ## Repository layout
 

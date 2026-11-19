@@ -15,3 +15,6 @@ __pycache__/
 
 # Project brief (kept local)
 ASSIGNMENT.*
+
+# Editor settings
+.vscode/

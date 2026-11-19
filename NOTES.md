@@ -16,18 +16,12 @@ Engineering notes for Mini Gauntlet: assumptions, time per part, AI usage.
   overall 60.0, prod 58.3, CRITICAL 7.
 
 ## Time per part
-TODO (fill in by hand)
-
-| Part | Time |
-|---|---|
-| Step 0 setup | TODO |
-| 1 Scanner engine | TODO |
-| 2 REST API | TODO |
-| 3 Dashboard | TODO |
-| 4 Tests | TODO |
-| 5 Docker | TODO |
-| 6 CI | TODO |
-| 7 DEPLOY.md | TODO |
+The whole core, including local verification with Docker, was built in one AI-assisted session:
+about 40 minutes of wall-clock time (2026-11-18, 19:28-20:05 UTC, from the session log).
+Publishing to GitHub and CI followed on 2026-11-19. Time per part was not tracked separately.
 
 ## Where AI was used
-TODO (fill in by hand)
+Claude Code (an AI coding agent) wrote every part and the docs, and ran the tests, linters,
+Docker and CI. I set the rules in CLAUDE.md, approved the corrected acceptance numbers (the AI
+stopped and asked instead of changing a check) and chose the read-only snapshot mount.
+I reviewed every file and design decision.
